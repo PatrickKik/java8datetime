@@ -13,7 +13,7 @@ import java.util.Locale;
  *
  * @author Patrick Kik
  */
-public class Formatting {
+public class FormattingExamples {
 
     public static void main(String[] args) {
 

@@ -10,7 +10,7 @@ import java.time.temporal.ChronoUnit;
  *
  * @author Patrick Kik
  */
-public class Times {
+public class TimeExamples {
 
     public static void main(String[] args) {
 

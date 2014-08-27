@@ -12,7 +12,7 @@ import java.time.temporal.TemporalAdjusters;
  *
  * @author Patrick Kik
  */
-public class Dates {
+public class DateExamples {
 
     public static void main(String[] args) {
 
