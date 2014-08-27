@@ -5,6 +5,13 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjusters;
 
+/**
+ * Examples of working with the Java SE 8 Date Time API
+ * <p/>
+ * Many thanks to The Java(tm) Tutorials.
+ *
+ * @author Patrick Kik
+ */
 public class Dates {
 
     public static void main(String[] args) {
