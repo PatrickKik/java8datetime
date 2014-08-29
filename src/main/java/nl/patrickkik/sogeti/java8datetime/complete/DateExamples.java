@@ -1,9 +1,7 @@
 package nl.patrickkik.sogeti.java8datetime.complete;
 
 import java.time.*;
-import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalAdjusters;
 
 /**
  * Examples of working with the Java SE 8 Date Time API
@@ -57,9 +55,5 @@ public class DateExamples {
         System.out.println(now.plusMonths(1));
         System.out.println(now.plus(3, ChronoUnit.CENTURIES));
         // System.out.println(now.plus(1, ChronoUnit.HALF_DAYS)); // Nope
-
-        // A bit more complex.
-        System.out.println(now.with(TemporalAdjusters.lastDayOfMonth()));
-        System.out.println(now.with(TemporalAdjusters.lastDayOfMonth()).format(DateTimeFormatter.BASIC_ISO_DATE));
     }
 }

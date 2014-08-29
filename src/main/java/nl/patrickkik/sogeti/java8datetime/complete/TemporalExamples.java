@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjusters;
 
 /**
  * Examples of working with the Java SE 8 Date Time API
@@ -21,6 +22,9 @@ public class TemporalExamples {
         System.out.println(LocalDate.now().isSupported(ChronoField.YEAR));
         System.out.println(LocalDate.now().isSupported(ChronoField.MINUTE_OF_HOUR));
 
+        // A simple TemporalAdjuster
+        System.out.println(LocalDate.now().with(TemporalAdjusters.lastDayOfMonth()));
+
         // Adjusting a date or time (simple)
         System.out.println(LocalDate.now().with(t -> t.plus(1, ChronoUnit.MONTHS))); // Functional interface!
 
@@ -34,7 +38,7 @@ public class TemporalExamples {
         }));
 
         // Querying a date
-        System.out.println((Boolean) LocalDate.of(2014, Month.SEPTEMBER, 6).query(t -> {
+        System.out.println((Boolean) LocalDate.of(2014, Month.SEPTEMBER, 4).query(t -> {
             LocalDate ld = (LocalDate) t;
             return ld.getDayOfWeek().equals(DayOfWeek.SATURDAY) || ld.getDayOfWeek().equals(DayOfWeek.SUNDAY);
         }));
